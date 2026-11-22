@@ -1,0 +1,30 @@
+# Bỏ qua môi trường ảo (Virtual Environment) & Python cache
+venv/
+.venv/
+.venv-web/
+__pycache__/
+*.py[cod]
+
+# Bỏ qua dữ liệu gốc khổng lồ & file nhị phân nặng
+recommendation_research/data/
+*.npy
+*.pkl
+*.pt
+*.h5
+*.gz
+*.parquet
+**/results_backup/
+**/catbook_artifacts/
+
+# Bỏ qua file log cục bộ, IDE & cấu hình máy cá nhân
+python_path.txt
+*.log
+.env
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Bỏ qua các file danh sách gợi ý thô cỡ lớn trên Goodreads 
+recommendation_research/results/recommendations/
+recommendation_research/artifacts/book_tfidf.npz

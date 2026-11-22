@@ -1,0 +1,35 @@
+{
+  "users_evaluated": 54,
+  "trials": 326,
+  "k": 10,
+  "evaluation_protocol": "Leave-one-book-out over distinct user-book pairs; weighted history is preserved for profile construction.",
+  "history_weighting": "Repeated book IDs returned by load_user_histories encode behavior weights. All occurrences of the held-out book are excluded from the profile.",
+  "results": {
+    "popularity": {
+      "hit": 0.2209,
+      "ndcg": 0.0834,
+      "same_category": 0.1586
+    },
+    "random": {
+      "hit": 0.0951,
+      "ndcg": 0.0399,
+      "same_category": 0.1479
+    },
+    "tfidf": {
+      "hit": 0.2975,
+      "ndcg": 0.1336,
+      "same_category": 0.412
+    },
+    "semantic": {
+      "hit": 0.2055,
+      "ndcg": 0.096,
+      "same_category": 0.3365
+    },
+    "hybrid": {
+      "hit": 0.2761,
+      "ndcg": 0.1286,
+      "same_category": 0.3865
+    }
+  },
+  "note": "CatBook contains simulated users with category-oriented preferences. These results are an initial system-level evaluation and do not replace the Goodreads experiments. The leave-one-book-out protocol is not time-based."
+}

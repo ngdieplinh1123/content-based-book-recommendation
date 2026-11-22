@@ -1,0 +1,113 @@
+{
+  "mock_users": 12,
+  "avg_taste_precision": 0.75,
+  "avg_popular_taste_precision": 0.167,
+  "avg_overlap_between_different_tastes": 0.04,
+  "users_with_seen_items_in_top_k": 0,
+  "users": [
+    {
+      "user_id": 71,
+      "taste": "Kỹ năng sống",
+      "recommended": 10,
+      "taste_precision": 1.0,
+      "popular_taste_precision": 0.0,
+      "repeats_seen_item": false
+    },
+    {
+      "user_id": 72,
+      "taste": "Kỹ năng sống",
+      "recommended": 10,
+      "taste_precision": 1.0,
+      "popular_taste_precision": 0.0,
+      "repeats_seen_item": false
+    },
+    {
+      "user_id": 73,
+      "taste": "Thiếu nhi",
+      "recommended": 10,
+      "taste_precision": 1.0,
+      "popular_taste_precision": 0.0,
+      "repeats_seen_item": false
+    },
+    {
+      "user_id": 74,
+      "taste": "Thiếu nhi",
+      "recommended": 10,
+      "taste_precision": 1.0,
+      "popular_taste_precision": 0.0,
+      "repeats_seen_item": false
+    },
+    {
+      "user_id": 75,
+      "taste": "Văn học",
+      "recommended": 10,
+      "taste_precision": 0.5,
+      "popular_taste_precision": 0.4,
+      "repeats_seen_item": false
+    },
+    {
+      "user_id": 76,
+      "taste": "Văn học",
+      "recommended": 10,
+      "taste_precision": 0.5,
+      "popular_taste_precision": 0.4,
+      "repeats_seen_item": false
+    },
+    {
+      "user_id": 77,
+      "taste": "Kinh tế",
+      "recommended": 10,
+      "taste_precision": 0.6,
+      "popular_taste_precision": 0.3,
+      "repeats_seen_item": false
+    },
+    {
+      "user_id": 78,
+      "taste": "Kinh tế",
+      "recommended": 10,
+      "taste_precision": 0.8,
+      "popular_taste_precision": 0.3,
+      "repeats_seen_item": false
+    },
+    {
+      "user_id": 79,
+      "taste": "Khoa học - Công nghệ",
+      "recommended": 10,
+      "taste_precision": 0.8,
+      "popular_taste_precision": 0.0,
+      "repeats_seen_item": false
+    },
+    {
+      "user_id": 80,
+      "taste": "Khoa học - Công nghệ",
+      "recommended": 10,
+      "taste_precision": 0.8,
+      "popular_taste_precision": 0.0,
+      "repeats_seen_item": false
+    },
+    {
+      "user_id": 81,
+      "taste": "Tâm lý - Tình cảm",
+      "recommended": 10,
+      "taste_precision": 0.5,
+      "popular_taste_precision": 0.3,
+      "repeats_seen_item": false
+    },
+    {
+      "user_id": 82,
+      "taste": "Tâm lý - Tình cảm",
+      "recommended": 10,
+      "taste_precision": 0.5,
+      "popular_taste_precision": 0.3,
+      "repeats_seen_item": false
+    }
+  ],
+  "personas": [
+    "Kỹ năng sống",
+    "Thiếu nhi",
+    "Văn học",
+    "Kinh tế",
+    "Khoa học - Công nghệ",
+    "Tâm lý - Tình cảm"
+  ]
+}

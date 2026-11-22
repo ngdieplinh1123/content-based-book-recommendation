@@ -1,0 +1,41 @@
+{
+  "test_users": 60104,
+  "results": {
+    "popularity": {
+      "Hit Rate@5": 0.0934,
+      "NDCG@5": 0.0638,
+      "Hit Rate@10": 0.1299,
+      "NDCG@10": 0.0756
+    },
+    "tfidf_recency_r07": {
+      "Hit Rate@5": 0.0362,
+      "NDCG@5": 0.0209,
+      "Hit Rate@10": 0.0582,
+      "NDCG@10": 0.028
+    },
+    "jina_semantic_r07": {
+      "Hit Rate@5": 0.018,
+      "NDCG@5": 0.011,
+      "Hit Rate@10": 0.0284,
+      "NDCG@10": 0.0144
+    },
+    "svd_e40": {
+      "Hit Rate@5": 0.0021,
+      "NDCG@5": 0.0013,
+      "Hit Rate@10": 0.0034,
+      "NDCG@10": 0.0017
+    },
+    "svdpp_e40": {
+      "Hit Rate@5": 0.0032,
+      "NDCG@5": 0.0021,
+      "Hit Rate@10": 0.0048,
+      "NDCG@10": 0.0026
+    },
+    "hybrid_r07": {
+      "Hit Rate@5": 0.0289,
+      "NDCG@5": 0.0178,
+      "Hit Rate@10": 0.046,
+      "NDCG@10": 0.0233
+    }
+  }
+}

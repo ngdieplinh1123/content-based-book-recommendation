@@ -1,0 +1,30 @@
+model:
+  name: content_based
+  type: tfidf
+
+tfidf:
+  lowercase: true
+  stop_words: english
+  min_df: 2
+  max_df: 0.95
+  ngram_range:
+    - 1
+    - 1
+  analyzer: word
+  use_idf: true
+  smooth_idf: true
+  sublinear_tf: false
+  norm: l2
+
+user_profile:
+  method: mean
+
+recommendation:
+  candidate_k: 500
+  top_k: 10
+
+features:
+  text_columns:
+    - title
+    - description
+    - popular_shelves

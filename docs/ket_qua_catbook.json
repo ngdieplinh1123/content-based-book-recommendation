@@ -1,39 +1,39 @@
 {
-  "users_evaluated": 56,
-  "trials": 345,
+  "users_evaluated": 57,
+  "trials": 350,
   "k": 10,
   "evaluation_protocol": "Leave-one-book-out over distinct user-book pairs; weighted history is preserved for profile construction.",
   "history_weighting": "Repeated book IDs returned by load_user_histories encode behavior weights. All occurrences of the held-out book are excluded from the profile.",
   "results": {
     "popularity": {
-      "hit": 0.2116,
-      "ndcg": 0.0786,
-      "same_category": 0.1606
+      "hit": 0.2114,
+      "ndcg": 0.0912,
+      "same_category": 0.1586
     },
     "random": {
-      "hit": 0.0957,
-      "ndcg": 0.0403,
-      "same_category": 0.1499
+      "hit": 0.0943,
+      "ndcg": 0.0398,
+      "same_category": 0.1543
     },
     "tfidf": {
-      "hit": 0.3014,
-      "ndcg": 0.1377,
-      "same_category": 0.4023
+      "hit": 0.3171,
+      "ndcg": 0.1455,
+      "same_category": 0.4057
     },
     "semantic": {
-      "hit": 0.2145,
-      "ndcg": 0.1037,
-      "same_category": 0.3351
+      "hit": 0.2171,
+      "ndcg": 0.1038,
+      "same_category": 0.3423
     },
     "hybrid": {
-      "hit": 0.2841,
-      "ndcg": 0.1433,
-      "same_category": 0.3794
+      "hit": 0.28,
+      "ndcg": 0.1384,
+      "same_category": 0.3869
     },
     "tfidf_pyvi": {
-      "hit": 0.287,
-      "ndcg": 0.1341,
-      "same_category": 0.3838
+      "hit": 0.2886,
+      "ndcg": 0.1397,
+      "same_category": 0.3871
     }
   },
   "note": "CatBook contains simulated users with category-oriented preferences. These results are an initial system-level evaluation and do not replace the Goodreads experiments. The leave-one-book-out protocol is not time-based."

@@ -107,7 +107,7 @@ def load_user_histories(
     cursor: DictCursor,
     valid_book_ids: set[str],
 ) -> dict[int, list[str]]:
-    """Collect orders (not cancelled), cart adds, views, and non-low reviews."""
+    """Collect orders (not cancelled), cart adds, views, and reviews of 4 stars or more."""
     signals: dict[int, dict[str, int]] = defaultdict(
         lambda: defaultdict(int)
     )
@@ -143,14 +143,14 @@ def load_user_histories(
         for row in cursor.fetchall():
             _add_signal(signals, row, valid_book_ids)
 
-    if _table_exists(cursor, "product_reviews"):
-        cursor.execute(
-            "SELECT r.user_id, r.product_id AS book_id, "
-            "CASE WHEN r.rating >= 4 THEN 3 ELSE 1 END AS signal_weight "
-            "FROM product_reviews r "
-            "INNER JOIN users u ON u.id = r.user_id "
-            "WHERE r.rating >= 3 AND u.role <> 'admin'"
-        )
+        if _table_exists(cursor, "product_reviews"):
+            cursor.execute(
+                "SELECT r.user_id, r.product_id AS book_id, "
+                "3 AS signal_weight "
+                "FROM product_reviews r "
+                "INNER JOIN users u ON u.id = r.user_id "
+                "WHERE r.rating >= 4 AND u.role <> 'admin'"
+            )
         for row in cursor.fetchall():
             _add_signal(signals, row, valid_book_ids)
 

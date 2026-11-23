@@ -1,4 +1,4 @@
-# HƯỚNG DẪN CÀI ĐẶT - HIỆU SÁCH ONLINE CATBOOK
+# NGHIÊN CỨU MÔ HÌNH GỢI Ý DỰA TRÊN NỘI DUNG CHO BÀI TOÁN ĐỀ XUẤT SÁCH CÁ NHÂN HÓA
 
 ## 1. Cấu trúc project
 

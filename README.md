@@ -72,7 +72,7 @@ Catbook/
   python run_offline_recommendation.py
   ```
 - Mặc định dùng MySQL trên `127.0.0.1:3306`, database `catbook_db`, user `root` và mật khẩu trống. Có thể cấu hình bằng các biến môi trường: `CATBOOK_DB_HOST`, `CATBOOK_DB_PORT`, `CATBOOK_DB_NAME`, `CATBOOK_DB_USER`, `CATBOOK_DB_PASSWORD`.
-- Script đọc sách còn hàng (thuộc danh mục đang bật), đơn hàng chưa hủy, lượt thêm giỏ, lượt xem và đánh giá từ 3 sao; mỗi cặp người dùng–sách có trọng số tối đa 5; tài khoản admin bị loại. Giữ thuật toán TF-IDF của nghiên cứu và ghi Top 10 vào bảng `user_recommendations`. Website dùng kết quả gần nhất và hiển thị sách phổ biến khi tài khoản chưa có gợi ý.
+- Script đọc sách còn hàng (thuộc danh mục đang bật), đơn hàng chưa hủy, lượt thêm giỏ, lượt xem và đánh giá từ 4 sao; mỗi cặp người dùng–sách có trọng số tối đa 5; tài khoản admin bị loại. Giữ thuật toán TF-IDF của nghiên cứu và ghi Top 10 vào bảng `user_recommendations`. Website dùng kết quả gần nhất và hiển thị sách phổ biến khi tài khoản chưa có gợi ý.
 - Có thể lên lịch chạy hằng ngày bằng Windows Task Scheduler. Dùng đường dẫn đầy đủ tới `recommendation_research\.venv-web\Scripts\python.exe` làm chương trình, `run_offline_recommendation.py` làm đối số và `recommendation_research` làm thư mục bắt đầu.
 - Tạo người dùng giả lập (mock users) với sở thích khác nhau để nghiệm thu:
   ```bash

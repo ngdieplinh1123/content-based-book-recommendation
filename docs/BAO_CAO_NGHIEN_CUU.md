@@ -40,26 +40,26 @@ validation 24.842 (người dùng có từ 10 tương tác), test 60.104.
 - Hệ quả thiết kế: CatBook có phương án dự phòng (danh sách sách phổ biến) cho người
   dùng chưa có lịch sử.
 
-## 2. CatBook (leave-one-book-out, Top-10, 56 người dùng có ≥ 3 sách, 345 lượt thử)
+## 2. CatBook (leave-one-book-out, Top-10, 57 người dùng có ≥ 3 sách, 350 lượt thử)
 
 | Phương pháp | Hit Rate@10 [KTC 95%] | NDCG@10 | Cùng danh mục |
 |---|---|---|---|
-| Ngẫu nhiên | 0,0957 [0,0655; 0,1281] | 0,0403 | 0,1499 |
-| Phổ biến nhất | 0,2116 [0,1579; 0,2689] | 0,0786 | 0,1606 |
-| **TF-IDF (fit lại trên CatBook)** | **0,3014** [0,2274; 0,3858] | 0,1377 | **0,4023** |
-| TF-IDF + tách từ (pyvi) | 0,2870 [0,2147; 0,3614] | 0,1341 | 0,3838 |
-| Semantic embedding đa ngôn ngữ | 0,2145 [0,1600; 0,2722] | 0,1037 | 0,3351 |
-| Hybrid (TF-IDF + embedding, RRF) | 0,2841 [0,2107; 0,3620] | **0,1433** | 0,3794 |
+| Ngẫu nhiên | 0,0943 [0,0634; 0,1267] | 0,0398 | 0,1543 |
+| Phổ biến nhất | 0,2114 [0,1583; 0,2722] | 0,0912 | 0,1586 |
+| **TF-IDF (fit lại trên CatBook)** | **0,3171** [0,2417; 0,3970] | **0,1455** | **0,4057** |
+| TF-IDF + tách từ (pyvi) | 0,2886 [0,2153; 0,3690] | 0,1397 | 0,3871 |
+| Semantic embedding đa ngôn ngữ | 0,2171 [0,1625; 0,2757] | 0,1038 | 0,3423 |
+| Hybrid (TF-IDF + embedding, RRF) | 0,2800 [0,2087; 0,3575] | 0,1384 | 0,3869 |
 
 Khoảng tin cậy (KTC) 95% tính bằng bootstrap theo người dùng (5.000 lần, seed 42).
 
 **Chênh lệch có ý nghĩa thống kê (KTC 95% của hiệu không chứa 0)**
 
-- TF-IDF so với Semantic: Hit Rate@10 +0,087; NDCG@10 +0,034; cùng danh mục +0,067.
-- TF-IDF so với Popularity: Hit Rate@10 +0,090; NDCG@10 +0,059; cùng danh mục +0,242.
+- TF-IDF so với Semantic: Hit Rate@10 +0,100; NDCG@10 +0,042; cùng danh mục +0,063.
+- TF-IDF so với Popularity: Hit Rate@10 +0,106; NDCG@10 +0,054; cùng danh mục +0,247.
 - Hybrid so với Semantic: có ý nghĩa ở cả ba chỉ số.
-- **TF-IDF so với Hybrid: không có ý nghĩa ở chỉ số nào** (Hit Rate@10 +0,017,
-  KTC [−0,035; +0,071]; NDCG@10 −0,006, KTC [−0,035; +0,022]).
+- **TF-IDF so với Hybrid: không có ý nghĩa ở chỉ số nào** (Hit Rate@10 +0,037,
+  KTC [−0,017; +0,089]; NDCG@10 +0,007, KTC [−0,014; +0,029]).
 
 **Giải thích và lưu ý**
 
@@ -72,7 +72,7 @@ Khoảng tin cậy (KTC) 95% tính bằng bootstrap theo người dùng (5.000 l
   `fastembed`) thấp hơn TF-IDF. Nguyên nhân chưa được kiểm chứng; một số khả năng là
   metadata ngắn, danh mục lặp trong văn bản, hoặc giới hạn độ dài đầu vào của mô hình.
 - Embedding của Goodreads (Jina, tiếng Anh) không được dùng lại cho CatBook.
-- Tách từ pyvi không cải thiện Hit Rate (0,3014 so với 0,2870, chưa kiểm định) nên để
+- Tách từ pyvi không cải thiện Hit Rate (0,3171 so với 0,2886, chưa kiểm định) nên để
   tùy chọn (`CATBOOK_SEGMENT=1`), mặc định tắt.
 
 ## 3. Cách chạy lại
